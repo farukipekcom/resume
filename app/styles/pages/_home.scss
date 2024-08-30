@@ -2,3 +2,60 @@ main {
   max-width: 720px;
   margin: 24px auto;
 }
+
+.about {
+  margin-top: 48px;
+}
+.work {
+  margin-top: 16px;
+  & + .work {
+    margin-top: 32px;
+  }
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    &-company-name {
+      font-size: 18px;
+      line-height: 1.5rem;
+      color: $lightPrimary;
+      font-weight: 600;
+    }
+    &-work-type {
+      font-size: 14px;
+      color: $lightGray;
+      font-weight: 500;
+      padding: 4px 8px;
+      background-color: #e5e5e5;
+      border-radius: 4px;
+    }
+    &-work-year {
+      font-size: 14px;
+      font-weight: 600;
+      color: $lightGray;
+      margin-left: auto;
+    }
+  }
+  &-role {
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: $lightGray;
+    font-weight: 400;
+  }
+  p {
+    margin-top: 8px;
+  }
+  span {
+    font-weight: 600;
+    color: $lightSecondary;
+  }
+  ul {
+    li {
+      line-height: 1.5rem;
+      color: $lightSecondary;
+      @include text;
+    }
+  }
+}

@@ -10,7 +10,7 @@ export default function Intro() {
         <Available />
       </div>
       <div className="role">Front-end Developer</div>
-      <div className="about">
+      <div className="introduction">
         I'm a front-end developer from Chicago, USA. I've been designing and developing websites since 2016. I have collaborated with
         clients across different countries and industries, creating diverse web solutions.
       </div>

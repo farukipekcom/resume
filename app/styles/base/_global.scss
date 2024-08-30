@@ -1,3 +1,13 @@
 body {
   background-color: #fafafa;
 }
+h2 {
+  @include title;
+  margin: 0px;
+}
+p {
+  @include text;
+}
+section {
+  margin-top: 48px;
+}

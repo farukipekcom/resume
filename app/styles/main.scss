@@ -4,3 +4,12 @@
 
 // Base
 @import "base/_reset.scss";
+@import "base/_global.scss";
+
+// Pages
+@import "pages/_home.scss";
+
+// Components
+@import "components/_available.scss";
+@import "components/_intro.scss";
+@import "components/_icons.scss";

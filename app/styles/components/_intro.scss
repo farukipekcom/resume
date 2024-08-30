@@ -1,0 +1,21 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .name {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: $lightPrimary;
+  }
+}
+.role {
+  color: $lightGray;
+  font-size: 18px;
+  font-weight: 500;
+}
+.about {
+  color: $lightSecondary;
+  margin-top: 16px;
+  @include text;
+}

@@ -1,0 +1,26 @@
+.icons {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  .icon {
+    height: 32px;
+    width: 32px;
+    border: 1px solid $lightSecondary;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    svg {
+      fill: $lightSecondary;
+    }
+    &:hover {
+      background-color: #e4e4e4;
+      transition: background-color 0.2s;
+      svg {
+        fill: $lightPrimary;
+      }
+    }
+  }
+}

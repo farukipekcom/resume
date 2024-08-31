@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import Arrow from "./components/arrow";
 import Intro from "./components/intro";
-
+import projects from "./data/projects.json";
 export default function Home() {
   return (
     <main>
@@ -87,6 +88,65 @@ export default function Home() {
             Wordpress, PHP, MySQL, JavaScript, React, NextJS, Git, APIs, ACF, SEO, Figma, UI/UX Design, Responsive Design, Mobile First
             Design
           </p>
+        </div>
+      </section>
+      <section className="education">
+        <h2>Education</h2>
+        <div className="college">
+          <div className="college-heading">
+            <div className="college-heading-name">Konya Technical University, Turkey</div>
+            <div className="college-heading-year">Sep 2018 - Jan 2024</div>
+          </div>
+          <div className="college-department">BS, Computer Engineering</div>
+        </div>
+        <div className="college">
+          <div className="college-heading">
+            <div className="college-heading-name">Akdeniz University, Turkey</div>
+            <div className="college-heading-year">Sep 2014 - Jun 2016</div>
+          </div>
+          <div className="college-department">AS, Computer Programming</div>
+        </div>
+      </section>
+      <section className="skills">
+        <h2>Skills</h2>
+        <ul className="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SCSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>NextJS</li>
+          <li>Git</li>
+          <li>APIs</li>
+          <li>GraphQL</li>
+          <li>WordPress</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>SEO</li>
+          <li>UI/UX Design</li>
+        </ul>
+      </section>
+      <section className="projects">
+        <h2>Projects</h2>
+        <div className="list">
+          {projects.map((item) => {
+            const tags = item.project_tags;
+            return (
+              <a href={item.project_link} className="project" key={item.id}>
+                <span className="project-category">{item.project_category}</span>
+                <h3 className="project-name">{item.project_name}</h3>
+                <p className="project-text">{item.project_text}</p>
+                <ul>
+                  {tags.map((tag) => {
+                    return <li key={tag}>{tag}</li>;
+                  })}
+                </ul>
+                <Arrow />
+              </a>
+            );
+          })}
         </div>
       </section>
     </main>

@@ -1,8 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #fafafa;
 }
 h2 {
   @include title;
+  margin: 0px;
+}
+h3 {
   margin: 0px;
 }
 p {

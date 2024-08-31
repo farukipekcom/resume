@@ -1,0 +1,33 @@
+.arrow {
+  opacity: 0;
+  transition: opacity 0.4s;
+  .circle1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -26px;
+    right: -26px;
+    border-radius: 40px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgba(#dcdddf, 0.6);
+  }
+  .circle2 {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -36px;
+    right: -36px;
+    border-radius: 50px;
+    z-index: 0;
+    overflow: hidden;
+    background-color: rgba(#dcdddf, 0.3);
+  }
+  svg {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+  }
+}

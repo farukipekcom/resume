@@ -6,7 +6,7 @@ import linkedin from "../public/linkedin.svg";
 import twitter from "../public/x.svg";
 import location from "../public/location.svg";
 import Link from "next/link";
-import Project from "./components/Project/page";
+import Project from "./components/Project/Project";
 
 const projects = [
   {

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, sans-serif;
+}
+.card {
+  @apply mt-8 flex flex-col gap-4  leading-relaxed;
+}
+.card-title {
+  @apply text-xl font-bold mt-2;
+}
+.card-item {
+  @apply text-sm;
+}
+.card-item + .card-item {
+  @apply mt-4;
+}
+.card-item-info {
+  @apply flex justify-between items-center gap-2;
+}
+.card-item-info-title {
+  @apply text-base font-semibold;
+}
+.card-item-info-subtitle {
+  @apply text-sm font-medium text-gray-700;
+}
+.card-item-info-date {
+  @apply text-sm font-medium text-gray-700 min-w-max;
+}
+.card-item-details {
+  @apply mt-1;
+}
+.card-projects {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+.card-project {
+  @apply flex mt-2 flex-col gap-2 justify-between ring-1 ring-gray-200 hover:ring-2 hover:ring-gray-300 transition-all duration-300 p-4 rounded-xl;
+}
+.card-project-title {
+  @apply text-base font-semibold;
+}
+.card-project-description {
+  @apply text-sm font-medium;
+}
+.card-project-tags {
+  @apply flex gap-2 flex-wrap;
+}
+.card-project-tag {
+  @apply text-[10px] font-semibold bg-gray-100  px-2 py-1 rounded-md;
+}
+.tag-list {
+  @apply flex gap-2 mt-2 flex-1 flex-wrap;
+}
+.tag-list > li {
+  @apply text-xs font-semibold bg-gray-100 px-2 py-1 rounded-md;
+}
+
+.skill-tag > li {
+  @apply bg-gray-700 text-white;
+}
+.social-links {
+  @apply border border-gray-300 rounded-md  p-1 cursor-pointer hover:bg-gray-100 transition-colors duration-200;
+}
